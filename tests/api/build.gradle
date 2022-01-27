@@ -3,15 +3,17 @@
  */
 
 plugins {
-    id 'tech.romashov.chip.kotlin-application-conventions'
+    id 'tech.romashov.chip.kotlin-common-conventions'
+    id 'tech.romashov.chip.kotlin-tests-conventions'
 }
 
 dependencies {
     implementation 'org.apache.commons:commons-text'
     implementation project(':utilities')
+    implementation 'io.rest-assured:kotlin-extensions:4.4.0'
 }
 
 application {
     // Define the main class for the application.
-    mainClass = 'tech.romashov.chip.app.AppKt'
+    mainClass = 'tech.romashov.chip.tests.api.App'
 }

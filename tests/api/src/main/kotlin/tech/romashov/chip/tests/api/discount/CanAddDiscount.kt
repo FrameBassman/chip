@@ -1,4 +1,4 @@
-package tech.romashov.chip.app.discount
+package tech.romashov.chip.tests.api.discount
 
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
