@@ -8,4 +8,4 @@
  */
 
 rootProject.name = 'chip'
-include('tests:api', 'list', 'utilities')
+include('tests:api', 'tests:e2e', 'list', 'utilities')

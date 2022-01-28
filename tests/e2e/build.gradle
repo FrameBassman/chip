@@ -9,7 +9,7 @@ plugins {
 
 dependencies {
     implementation 'org.apache.commons:commons-text'
-    implementation 'io.rest-assured:kotlin-extensions:4.4.0'
+    implementation 'com.codeborne:selenide:6.2.1'
     implementation project(':utilities')
 }
 
@@ -18,7 +18,7 @@ task run(type: Test) {
     testClassesDirs = sourceSets.main.output.classesDirs
     classpath = sourceSets.main.runtimeClasspath
     useJUnitPlatform {
-        include 'tech/romashov/chip/tests/api/MainSuite.class'
+        include 'tech/romashov/chip/tests/e2e/MainSuite.class'
     }
     testLogging {
         events("passed", "skipped", "failed")
