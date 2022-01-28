@@ -13,7 +13,14 @@ dependencies {
     implementation 'io.rest-assured:kotlin-extensions:4.4.0'
 }
 
-application {
-    // Define the main class for the application.
-    mainClass = 'tech.romashov.chip.tests.api.App'
+task run(type: Test) {
+    dependsOn cleanRun
+    setTestClassesDirs(sourceSets.main.output.classesDirs)
+    classpath = sourceSets.main.runtimeClasspath
+    useJUnitPlatform {
+        include 'tech/romashov/chip/tests/api/MainSuite.class'
+    }
+    testLogging {
+        events("passed", "skipped", "failed")
+    }
 }

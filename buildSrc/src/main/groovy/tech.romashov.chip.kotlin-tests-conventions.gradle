@@ -1,9 +1,6 @@
 plugins {
     // Apply the common convention plugin for shared build configuration between library and application projects.
     id 'tech.romashov.chip.kotlin-common-conventions'
-
-    // Apply the application plugin to add support for building a CLI application in Java.
-    id 'application'
 }
 
 dependencies {
